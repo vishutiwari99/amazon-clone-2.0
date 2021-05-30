@@ -7,7 +7,7 @@ import { selectItems, selectTotal } from '../slices/basketSlice'
 import { useSession } from 'next-auth/client'
 import { loadStripe } from '@stripe/stripe-js'
 import axios from 'axios'
-const stripePromise = loadStripe(process.env.stripe_public_key);
+const stripePromise = loadStripe(`${process.env.stripe_public_key}`);
 const Checkout = () => {
     const createCheckoutSession = async () => {
         const stripe = await stripePromise;
