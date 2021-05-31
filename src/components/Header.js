@@ -8,8 +8,8 @@ const Header = () => {
     const [session] = useSession();
     const router = useRouter();
     const items = useSelector(selectItems);
-    const myLoader = ({ src, width, quality }) => {
-        return `https://links.papareact.com/f90`
+    const myLoader = ({ src }) => {
+        return `https://links.papareact.com/${src}`
     }
 
     return (
