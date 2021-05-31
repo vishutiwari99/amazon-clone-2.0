@@ -10,7 +10,7 @@ const Order = ({ id, amount, items, timestamp, amountShipping, images }) => {
                 </div>
                 <div>
                     <p className="text-xs font-bold">TOTAL</p>
-                    <p >
+                    <p>
                         <Currency quantity={amount} currency="USD" /> ~ Next Day Delivery{""}
                         <Currency quantity={amountShipping} currency="USD" />
                     </p>
@@ -23,7 +23,7 @@ const Order = ({ id, amount, items, timestamp, amountShipping, images }) => {
             <div className="p-5 sm:p-10">
                 <div className="flex space-x-6 overflow-x-auto">
                     {images.map((image) => (
-                        <img src={image} alt="Product Image" className="h-20 object-contain sm:h-32" />
+                        <img key={id} src={image} alt="Product Image" className="h-20 object-contain sm:h-32" />
                     ))}
                 </div>
             </div>
