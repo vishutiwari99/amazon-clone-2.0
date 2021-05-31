@@ -7,6 +7,7 @@ import Order from "../components/Order";
 const Orders = ({ orders }) => {
     const [session] = useSession();
     console.log(orders)
+    if (!session) return <h2>Please Signin to see your orders</h2>
     return (
         <div>
             <Header />
