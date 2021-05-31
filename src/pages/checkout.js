@@ -13,8 +13,8 @@ const Checkout = () => {
     const items = useSelector(selectItems)
     const total = useSelector(selectTotal)
 
+    const stripePromise = loadStripe(process.env.stripe_public_key);
     const createCheckoutSession = async () => {
-        const stripePromise = loadStripe(process.env.stripe_public_key);
         // const stripePromise = await loadStripe('pk_test_51HLCKkAsgI3yf8P64e3lDnnyRJNlGpDnfm6uY19Ay5vSgJSHJ1gE37sfq0FF5PIKewpYgAnMb6bbyRTtTZiipnw200BRQUaogD');
         const stripe = await stripePromise;
         // call th backend to create a checkout session..
