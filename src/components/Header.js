@@ -9,7 +9,7 @@ const Header = () => {
     const router = useRouter();
     const items = useSelector(selectItems);
     const myLoader = ({ src }) => {
-        return `https://links.papareact.com/${src}`
+        return `https://links.papareact.com${src}`
     }
 
     return (
